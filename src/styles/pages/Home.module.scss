@@ -1,0 +1,87 @@
+@import "../global.scss";
+
+.todoContainer {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+
+  p {
+    color: $muted;
+    margin: 10px;
+  }
+}
+
+.todoHeader {
+  height: 200px;
+  width: 100%;
+  background-color: $white;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.todoInputs {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.todoInput {
+  height: 50px;
+  width: 200px;
+
+  border-radius: 5px;
+  border: 2px solid $tealBlue;
+
+  padding: 20px;
+  margin: 15px;
+
+  color: $text;
+
+  &::placeholder {
+    color: $muted;
+  }
+
+  &:focus {
+    border: 2px solid $blue;
+  }
+}
+
+.todoButton {
+  height: 50px;
+  width: 50px;
+
+  background-color: $tealBlue;
+  color: $white;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $blue;
+    transition: 0.2s;
+  }
+
+  svg {
+    margin: 0 auto;
+    font-size: 24px;
+  }
+}

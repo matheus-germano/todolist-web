@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f2f5;
+  color: #333;
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+.todoContainer {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.todoContainer p {
+  color: #999;
+  margin: 10px;
+}
+
+.todoHeader {
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.todoInputs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todoInput {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  border: 2px solid #5ac8fa;
+  padding: 20px;
+  margin: 15px;
+  color: #333;
+}
+
+.todoInput::-webkit-input-placeholder {
+  color: #999;
+}
+
+.todoInput:-ms-input-placeholder {
+  color: #999;
+}
+
+.todoInput::-ms-input-placeholder {
+  color: #999;
+}
+
+.todoInput::placeholder {
+  color: #999;
+}
+
+.todoInput:focus {
+  border: 2px solid #007aff;
+}
+
+.todoButton {
+  height: 50px;
+  width: 50px;
+  background-color: #5ac8fa;
+  color: #fff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todoButton:hover {
+  background-color: #007aff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.todoButton svg {
+  margin: 0 auto;
+  font-size: 24px;
+}
+/*# sourceMappingURL=home.module.css.map */

@@ -1,0 +1,44 @@
+$backgroundColor: #f1f2f5;
+$text: #333;
+$muted: #999;
+$blue: #007aff;
+$tealBlue: #5ac8fa;
+$pink: #ff2d55;
+$red: #ff3b30;
+$white: #fff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $text;
+}
+
+body,
+input,
+textarea,
+button {
+  font: 400 1rem "Montserrat", sans-serif;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
