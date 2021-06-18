@@ -20,15 +20,38 @@ export default function Index() {
   }
 
   const addTask = () => {
-    if(task != '' && deadline != '') {
+    // Verifica se os campos nao estao vazios
+    if(task !== '' && deadline !== '') {      
       const newTask = { task: task, deadline: deadline }
-      setTodoList([ ...todoList, newTask ])
-      setTask('')
-      setDeadline('')
+      const search = todoList.filter((task) => task.task === newTask.task)
+
+      // verifica se tarefa já existe
+      if(search.length !== 0) {
+        window.alert('Tarefa já adiciona, por favor insira uma diferente.')
+        setTask('')
+        setDeadline('')
+
+        return;
+      }
+      else {
+        // seta a nova tarefa no vetor e limpa os campos.
+        setTodoList([ ...todoList, newTask ])
+        setTask('')
+        setDeadline('')
+      }
     }
     else {
       window.alert('Por favor, preencha os dados corretamente!')
     }
+  }
+
+  const deleteTask = (taskToDelete) => {
+    // A partir do filtro você seta na variavel todas as
+    // tarefas ja existentes diferentes da que foi pedida para ser deletada.
+    setTodoList(todoList.filter((task) => {
+      // Retorna toda task diferente da passada na função.
+      return task.task !== taskToDelete;
+    }))
   }
 
   return (
@@ -59,9 +82,10 @@ export default function Index() {
       </div>
       
       <div className={styles.todoList}>
-        { todoList != '' ? (todoList.map((task, key) => {
+        {/* Verifica se a lista de tarefas esta vazia */}
+        { todoList !== '' ? (todoList.map((task, key) => {
           return(
-            <Task key={key} task={task} />
+            <Task key={key} task={task} deleteTask={deleteTask} />
           )
         })) : <p>Nenhuma tarefa adicionada até o momento!</p> }
       </div>
