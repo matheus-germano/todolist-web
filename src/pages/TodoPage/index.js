@@ -72,7 +72,7 @@ export default function Index() {
             type="text"
             name="deadline"
             className={styles.todoInput}
-            placeholder="Data limite"
+            placeholder="Data limite em dias"
             autocomplete="off"
             value={deadline}
             onChange={handleChange}
@@ -83,7 +83,7 @@ export default function Index() {
       
       <div className={styles.todoList}>
         {/* Verifica se a lista de tarefas esta vazia */}
-        { todoList !== '' ? (todoList.map((task, key) => {
+        { todoList.length !== 0 ? (todoList.map((task, key) => {
           return(
             <Task key={key} task={task} deleteTask={deleteTask} />
           )

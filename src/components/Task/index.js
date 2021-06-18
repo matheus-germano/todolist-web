@@ -10,7 +10,7 @@ export default function index({ task, deleteTask }) {
     <div className={styles.taskContainer}>
       <div className={styles.taskInfo}>
         <p className={styles.taskDescription}>{task.task}</p>
-        <p className={styles.taskDate}>{task.deadline}</p>
+        <p className={styles.taskDate}>{task.deadline} dias</p>
       </div>
       <button className={styles.deleteButton} onClick={() => { deleteTask(task.task) }}><MdDelete/></button>
     </div>
